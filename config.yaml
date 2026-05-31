@@ -1,0 +1,21 @@
+name: Iotics Smart Home Bridge
+version: 1.0.0
+slug: iotics_smart_home_bridge
+description: Integrate Iotics smart home devices into Home Assistant via MQTT and cloud API. Fully automatic device discovery.
+url: https://github.com/keithcardozo10-dev/ha-iotics-addon
+arch:
+  - aarch64
+  - amd64
+  - armv7
+init: false
+host_network: true
+hassio_api: true
+homeassistant_api: true
+options:
+  iotics_email: ""
+  iotics_password: ""
+  iotics_appid: "696f74696373617070"
+schema:
+  iotics_email: str
+  iotics_password: str
+  iotics_appid: str
