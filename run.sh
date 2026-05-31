@@ -12,7 +12,7 @@ if [ -z "$IOTICS_EMAIL" ] || [ -z "$IOTICS_PASSWORD" ]; then
     exit 1
 fi
 
-bashio::log.info "Starting Iotics Smart Home Bridge..."
+bashio::log.info "Starting Iotics Switches Addon..."
 bashio::log.info "Email: ${IOTICS_EMAIL}"
 bashio::log.info "App ID: ${IOTICS_APPID}"
 
