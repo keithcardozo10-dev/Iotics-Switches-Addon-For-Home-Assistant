@@ -1,7 +1,7 @@
-# Iotic Switches Addon for Home Assistant
+# Iotics Switches Addon for Home Assistant
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant)](https://github.com/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant/releases)
-[![GitHub all releases](https://img.shields.io/github/downloads/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant/total)](https://github.com/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant)](https://github.com/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant/releases)
+[![GitHub all releases](https://img.shields.io/github/downloads/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant/total)](https://github.com/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant/releases)
 
 A Home Assistant addon that integrates [Iotics](https://iotics.io) smart home devices. Fully automatic device discovery — just enter your Iotics email and password, and all switches, lights, fans, and ACs are automatically detected and controllable from your HA dashboard.
 
@@ -25,14 +25,14 @@ A Home Assistant addon that integrates [Iotics](https://iotics.io) smart home de
 3. Click the **three dots** (⋮) menu in the top-right corner → **Repositories**.
 4. In the "Add repository" field, paste this URL:
    ```
-   https://github.com/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant
+   https://github.com/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant
    ```
 5. Click **Add**.
-6. The page will reload. You should see "Iotic Switches Addon" appear under the "Local add-ons" section.
+6. The page will reload. You should see "Iotics Switches Addon" appear under the "Local add-ons" section.
 
 ### Step 2: Install the Addon
 
-1. Click on **Iotic Switches Addon** in the addon list.
+1. Click on **Iotics Switches Addon** in the addon list.
 2. Click **Install**.
    - This builds the Docker container with all dependencies (paho-mqtt, websockets).
    - It takes 2-5 minutes depending on your HA hardware. Watch the log output for progress.
@@ -59,7 +59,7 @@ A Home Assistant addon that integrates [Iotics](https://iotics.io) smart home de
 4. Go to the **Log** tab. You should see something like this:
 
    ```
-   [INFO] Iotics Smart Home Bridge starting...
+   [INFO] Iotics Switches Addon starting...
    [INFO] Loaded options: email=your@email.com, appid=696f74696373617070
    [INFO] REST API: 12 devices discovered
    [INFO] Snapshot: 61 items, 12 IPs from REST API
@@ -75,7 +75,7 @@ A Home Assistant addon that integrates [Iotics](https://iotics.io) smart home de
 ### Step 5: Verify It's Working
 
 1. Go to your HA dashboard.
-2. Click the **Iotic Switches** dashboard that was created in your sidebar.
+2. Click the **Iotics Switches** dashboard that was created in your sidebar.
 3. You should see all your Iotics devices listed with their current states.
 4. Try toggling a switch — it should control your physical Iotics device in real time.
 5. Press a physical Iotics switch — the state should update in HA within 1-2 seconds.
@@ -168,8 +168,8 @@ If this doesn't work (e.g., your Iotics app version uses a different ID):
 
 ### Repository Structure
 
-```
-Iotic-Switches-Addon-For-Home-Assistant/
+   ```
+Iotics-Switches-Addon-For-Home-Assistant/
 ├── config.yaml     # Addon configuration & schema
 ├── Dockerfile      # Container build
 ├── run.sh          # Entrypoint
@@ -184,7 +184,7 @@ The addon can be deployed as a local addon on any HA OS system:
 
 ```bash
 # Copy to your HA host
-scp -r Iotic-Switches-Addon-For-Home-Assistant/ hassio@<your-ha-ip>:/addons/iotics-addon/
+scp -r Iotics-Switches-Addon-For-Home-Assistant/ hassio@<your-ha-ip>:/addons/iotics-addon/
 
 # Rebuild and start
 sudo docker exec hassio_cli ha apps rebuild local_iotics_smart_home_bridge

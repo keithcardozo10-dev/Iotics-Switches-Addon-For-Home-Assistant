@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Iotics Smart Home Bridge — HA Addon
+"""Iotics Switches Addon — Home Assistant Addon
 
 Connects to Iotics cloud API and AWS IoT MQTT to sync Iotics devices
 with Home Assistant entities. Fully auto-discovers devices from the
@@ -719,7 +719,7 @@ def main():
         log("Set these in the HA addon configuration.")
         sys.exit(1)
 
-    log("Iotics Smart Home Bridge starting...")
+    log("Iotics Switches Addon starting...")
 
     # Step 1: Discover devices from cloud API
     devices = get_devices_from_cloud()

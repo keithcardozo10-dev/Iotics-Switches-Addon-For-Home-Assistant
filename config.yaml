@@ -1,8 +1,8 @@
-name: Iotics Smart Home Bridge
+name: Iotics Switches Addon
 version: 1.0.0
 slug: iotics_smart_home_bridge
 description: Integrate Iotics smart home devices into Home Assistant via MQTT and cloud API. Fully automatic device discovery.
-url: https://github.com/keithcardozo10-dev/ha-iotics-addon
+url: https://github.com/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant
 arch:
   - aarch64
   - amd64
