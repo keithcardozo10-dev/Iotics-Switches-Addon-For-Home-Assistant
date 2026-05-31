@@ -21,7 +21,7 @@ This document explains how the addon works, from start to finish, in plain langu
 
 ## 1. What Is This Addon?
 
-This addon connects your **Iotics smart home devices** (switches, lights, fans, ACs) to **Home Assistant** so you can control everything from one place.
+This addon connects your **Iotics smart home WiFi switches** (available at [https://www.iotics.io](https://www.iotics.io)) to **Home Assistant** so you can control everything from one place.
 
 The challenge it solves: Iotics devices have their own app and use a proprietary system (MQTT via AWS IoT + their own cloud API). This addon speaks both languages — it talks to Iotics systems AND talks to Home Assistant — acting as a **translator** between the two.
 

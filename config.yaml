@@ -1,20 +1,87 @@
-name: Iotics Switches Addon
-version: 1.0.0
+# ---------------------------------------------------------------
+# Iotics Switches Addon for Home Assistant — Addon Configuration
+#
+# This file tells Home Assistant everything it needs to know about
+# this addon: its name, version, what hardware it supports, and most
+# importantly, what configuration fields the user must fill in.
+#
+# When the addon is installed, HA reads this file to:
+# 1. Display the addon in the store with the right name and icon
+# 2. Show configuration fields in the Configuration tab
+# 3. Know which container architecture to build
+# 4. Set up networking and API access permissions
+# ---------------------------------------------------------------
+
+# The name that appears in the HA add-on store and sidebar.
+name: "Iotics Switches Addon"
+
+# Version of this addon. Increment this when you make updates.
+# Format: major.minor.patch (e.g., 1.0.0, 1.1.0, 2.0.0)
+version: "1.0.0"
+
+# A short, unique identifier used internally by the supervisor.
+# This becomes part of the Docker container name and is used in
+# API calls to manage the addon. Must be lowercase with underscores.
 slug: iotics_smart_home_bridge
-description: Integrate Iotics smart home devices into Home Assistant via MQTT and cloud API. Fully automatic device discovery.
+
+# A brief description shown in the add-on store.
+description: >-
+  Integrate Iotics smart home devices into Home Assistant via MQTT
+  and cloud API. Fully automatic device discovery.
+
+# The URL to the project's GitHub page. Shown in the addon info tab
+# so users can find the source code, report issues, or contribute.
 url: https://github.com/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant
+
+# List of CPU architectures this addon supports.
+# aarch64 = ARM 64-bit (Raspberry Pi 3/4/5, most modern ARM boards)
+# amd64   = Intel/AMD 64-bit (PCs, NUCs, most x86 systems)
+# armv7   = ARM 32-bit (older Raspberry Pi, some embedded devices)
 arch:
   - aarch64
   - amd64
   - armv7
+
+# init: false means this addon does NOT need to run before HA core.
+# It can start in parallel with other addons after HA is ready.
 init: false
+
+# host_network: true gives the container full access to the host's
+# network. This is REQUIRED because we need to send HTTP commands
+# directly to Iotics devices on the local network (e.g., to their
+# IP addresses like 192.168.1.100). Without this, the container
+# would be isolated from your home network.
 host_network: true
+
+# hassio_api: true allows the addon to call the HA supervisor API.
+# This is used to check addon state, restart, etc. (not directly
+# used by the bridge itself, but good practice for addons).
 hassio_api: true
+
+# homeassistant_api: true gives the addon access to the Home
+# Assistant REST API via the supervisor proxy. This is how we
+# create entities, read states, and post state updates. The
+# SUPERVISOR_TOKEN environment variable is automatically provided
+# for authentication.
 homeassistant_api: true
+
+# ---------------------------------------------------------------
+# Configuration Options (User-Facing)
+#
+# These are the fields the user sees and fills in on the addon's
+# Configuration tab. The `schema` section defines the types.
+# ---------------------------------------------------------------
+
+# Default values for the configuration fields. When a user first
+# installs the addon, these are the starting values.
 options:
   iotics_email: ""
   iotics_password: ""
   iotics_appid: "696f74696373617070"
+
+# Schema defines what type each field is and validates user input.
+# All three are simple strings (not passwords or formatted types),
+# because HA's supervisor handles complex types inconsistently.
 schema:
   iotics_email: str
   iotics_password: str

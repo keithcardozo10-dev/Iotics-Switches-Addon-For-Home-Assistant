@@ -3,7 +3,9 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant)](https://github.com/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant/releases)
 [![GitHub all releases](https://img.shields.io/github/downloads/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant/total)](https://github.com/keithcardozo10-dev/Iotics-Switches-Addon-For-Home-Assistant/releases)
 
-A Home Assistant addon that integrates [Iotics](https://iotics.io) smart home devices. Fully automatic device discovery — just enter your Iotics email and password, and all switches, lights, fans, and ACs are automatically detected and controllable from your HA dashboard.
+A Home Assistant addon that integrates [Iotics](https://www.iotics.io) smart home WiFi switches. Fully automatic device discovery — just enter your Iotics email and password, and all switches, lights, fans, and ACs are automatically detected and controllable from your HA dashboard.
+
+The Iotics hardware switches are available at [**https://www.iotics.io**](https://www.iotics.io). This addon makes these switches get triggered by real hardware sensors — either on Zigbee or WiFi — making automations finally useful. No more cloud-only control, no more unreliable bridges. Your Iotics switches respond to motion sensors, door sensors, temperature changes, or any trigger you set up in Home Assistant.
 
 ## Features
 
