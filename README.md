@@ -1,4 +1,7 @@
-# Iotics Smart Home Bridge
+# Iotic Switches Addon for Home Assistant
+
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant)](https://github.com/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant/releases)
+[![GitHub all releases](https://img.shields.io/github/downloads/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant/total)](https://github.com/keithcardozo10-dev/Iotic-Switches-Addon-For-Home-Assistant/releases)
 
 A Home Assistant addon that integrates [Iotics](https://iotics.io) smart home devices. Fully automatic device discovery — just enter your Iotics email and password.
 
