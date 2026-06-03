@@ -1,0 +1,21 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Iotics Cloud",
+        "description": "Enter your Iotics account credentials. These are the same email and password you use in the Iotics mobile app.",
+        "data": {
+          "email": "Email address",
+          "password": "Password",
+          "appid": "App ID"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the Iotics cloud. Check your email and password."
+    },
+    "abort": {
+      "reauth_successful": "Re-authentication successful."
+    }
+  }
+}
